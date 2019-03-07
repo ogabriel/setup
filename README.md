@@ -3,9 +3,9 @@ Repo for my dotfiles from my linux ricer
 
 # things that i want to use
 
-(i3)[https://github.com/i3/i3]
-(wal)[https://github.com/dylanaraps/pywal]
-(polybar)[https://github.com/jaagr/polybar]
+*(i3)[https://github.com/i3/i3]
+*(wal)[https://github.com/dylanaraps/pywal]
+*(polybar)[https://github.com/jaagr/polybar]
 
 # inpirations
 
