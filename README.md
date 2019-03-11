@@ -6,6 +6,8 @@ Repo for my dotfiles from my linux ricer
 * [i3](https://github.com/i3/i3)
 * [wal](https://github.com/dylanaraps/pywal)
 * [polybar](https://github.com/jaagr/polybar)
+* URxvt (any idea how to config it propely)
+* Tmux
 
 # inpirations
 
