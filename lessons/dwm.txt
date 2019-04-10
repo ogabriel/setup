@@ -1,0 +1,8 @@
+limited to 2k lines by the devs
+dwm is very old
+you can merge "patches" into your dwm "repository" for ganinng more functionalities
+
+the configuration for the shortcuts and stuff are made at the actual source C file
+After you configure your modifications you can to recompile it and install it again to take effect
+
+can use tags, that makes windows appear in differente workspaces at the same time

@@ -1,0 +1,2 @@
+# this bellow, at least in the vbmachine, didnt work well, the mouse didnt work with a pointer, and any graphical thing (pulseaudio,chrome etc)
+apt-get install i3 xorg network-mananger-gnome screen-fetch ranger thunar chromium pulseaudio blueman rxvt-unicode sudo feh

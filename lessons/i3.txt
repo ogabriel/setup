@@ -1,0 +1,14 @@
+tree (non-binary) based, more complex
+
+you can make different layout types, like
+split_mode_normal
+tiped mode (tabs),
+stacking mode (on top of each other)
+
+recommend to beginners
+good default configuration
+configuration is readable
+
+workspaces belongs to monitors
+
+can have commands modes, made by you
