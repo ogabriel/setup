@@ -63,6 +63,9 @@ do
             # really install now
             sudo apt-get update
             sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+            sudo groupadd docker
+            sudo usermod -aG docker $USER
             ;;
         6)
             wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
