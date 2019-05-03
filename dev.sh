@@ -12,7 +12,7 @@ options=(
         3 "neovim" off
         4 "vscode" off
         5 "docker-ce" off
-        6 "docker-composer" off
+        6 "docker-composer & machine" off
         7 "postman" off
         8 "kubectl" off
         9 "click 0.3.2" off
@@ -75,6 +75,10 @@ do
         6)
             sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
             sudo chmod +x /usr/local/bin/docker-compose
+
+            curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && \
+            chmod +x /tmp/docker-machine && \
+            sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
             ;;
         7)
             wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
