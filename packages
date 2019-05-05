@@ -1,0 +1,36 @@
+gabriel@think-box:~$ dpkg -l | grep network
+ii  avahi-autoipd                            0.7-4ubuntu2.1                        amd64        Avahi IPv4LL network address configuration daemon
+ii  dirmngr                                  2.2.8-3ubuntu1.1                      amd64        GNU privacy guard - network certificate management service
+ii  glib-networking:amd64                    2.58.0-1                              amd64        network-related giomodules for GLib
+ii  glib-networking-common                   2.58.0-1                              all          network-related giomodules for GLib - data files
+ii  glib-networking-services                 2.58.0-1                              amd64        network-related giomodules for GLib - D-Bus services
+ii  iproute2                                 4.18.0-1ubuntu2                       amd64        networking and traffic control tools
+ii  iputils-ping                             3:20180629-2ubuntu1                   amd64        Tools to test the reachability of network hosts
+ii  iputils-tracepath                        3:20180629-2ubuntu1                   amd64        Tools to trace the network path to a remote host
+ii  libgroupsock8:amd64                      2018.09.18-1                          amd64        multimedia RTSP streaming library (network interfaces and sockets)
+ii  libqt5network5:amd64                     5.11.1+dfsg-7ubuntu3                  amd64        Qt 5 network module
+ii  net-tools                                1.60+git20161116.90da8a0-2ubuntu1     amd64        NET-3 networking toolkit
+ii  netbase                                  5.4                                   all          Basic TCP/IP networking system
+ii  netplan.io                               0.96-0ubuntu0.18.10.2                 amd64        YAML network configuration abstraction for various backends
+ii  network-manager                          1.12.4-1ubuntu1.2                     amd64        network management framework (daemon and userspace tools)
+ii  network-manager-gnome                    1.8.18-2ubuntu2                       amd64        network management framework (GNOME frontend)
+ii  network-manager-pptp                     1.2.8-1build1                         amd64        network management framework (PPTP plugin core)
+ii  network-manager-pptp-gnome               1.2.8-1build1                         amd64        network management framework (PPTP plugin GNOME GUI)
+ii  networkd-dispatcher                      1.7-0ubuntu8                          all          Dispatcher service for systemd-networkd connection status changes
+ii  python3-netifaces                        0.10.4-1build1                        amd64        portable network interface information - Python 3.x
+ii  r8168-dkms                               8.046.00-1                            all          dkms source for the r8168 network driver
+ii  redis-server                             5:4.0.11-2                            amd64        Persistent key-value database with network interface
+ii  redis-tools                              5:4.0.11-2                            amd64        Persistent key-value database with network interface (client)
+ii  tcpdump                                  4.9.2-3                               amd64        command-line network traffic analyzer
+ii  xfce4-netload-plugin                     1.3.1-1                               amd64        network load monitor plugin for the Xfce4 panel
+gabriel@think-box:~$ dpkg -l | grep pulseaudio
+ii  gstreamer1.0-pulseaudio:amd64            1.14.4-1ubuntu1                       amd64        GStreamer plugin for PulseAudio
+ii  pulseaudio                               1:12.2-0ubuntu5                       amd64        PulseAudio sound server
+ii  pulseaudio-module-bluetooth              1:12.2-0ubuntu5                       amd64        Bluetooth module for PulseAudio sound server
+ii  pulseaudio-utils                         1:12.2-0ubuntu5                       amd64        Command line tools for the PulseAudio sound server
+ii  xfce4-pulseaudio-plugin:amd64            0.4.1-1ubuntu1                        amd64        Xfce4 panel plugin to control pulseaudio
+gabriel@think-box:~$ dpkg -l | grep blueman
+ii  blueman                                  2.0.5-1ubuntu1                        amd64        Graphical bluetooth manager
+gabriel@think-box:~/personal/rice$ dpkg -l | grep sensors
+ii  libsensors4:amd64                        1:3.4.0-4                             amd64        library to read temperature/voltage/fan sensors
+ii  lm-sensors                               1:3.4.0-4                             amd64        utilities to read temperature/voltage/fan sensors
