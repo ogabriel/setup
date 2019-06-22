@@ -38,3 +38,8 @@ install:
 	sudo apt-get install virtualbox-dkms
 	sudo apt-get install virtualbox-guest-dkms
 	sudo apt-get install virtualbox-guest-x11
+
+
+#for the lightdm, install this package
+https://github.com/prikhi/lightdm-mini-greeter
+this is super dope, is a new screen for lightdm
