@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Updating and Upgrading all your current packages"
-apt-get update && sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt-get install dialog
 cmd=(dialog --separate-output --checklist "Please Select Software you want to install:" 22 76 16)
@@ -25,7 +25,7 @@ options=(
 			cd st
 
 			git checkout 0.8.2
-			make clean install
+			sudo make clean install
 			;;
 		2)
 			apt-get install lightdm
@@ -62,6 +62,7 @@ options=(
 			mkdir build
 			cd build
 			../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+
 			make
 			sudo make install
 			;;
