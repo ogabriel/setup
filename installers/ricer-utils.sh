@@ -28,9 +28,9 @@ options=(
 			sudo make clean install
 			;;
 		2)
-			apt-get install lightdm
+			sudo apt-get install lightdm
 
-			apt-get install build-essential automake \
+			sudo apt-get install build-essential automake \
 				pkg-config fakeroot debhelper \
 				liblightdm-gobject-dev libgtk-3-dev
 
