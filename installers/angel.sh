@@ -22,15 +22,17 @@ sudo apt install libgl1-mesa-dri mesa-utils -y
 
 sudo apt install lightdm lightdm-greeter lightdm-webkit-greeter --no-install-recommends -y
 
-apt install i3 --no-install-recommends -y
+sudo apt install i3 --no-install-recommends -y
 
-apt install compton -y
+sudo apt install compton -y
 
-apt install vim neovim vim-gnome -y
+sudo apt install vim neovim vim-gnome -y
 
-apt install chromium-browser -y
+sudo apt install chromium-browser -y
 
-apt install build-essential -y
+sudo apt install build-essential -y
+
+sudo apt install pulseaudio feh ranger chromium-browser
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
