@@ -3,6 +3,9 @@
 echo "Updating and Upgrading all your current packages"
 sudo apt-get update && sudo apt-get upgrade -y
 
+cd
+mkdir tmp
+
 sudo apt-get install dialog
 cmd=(dialog --separate-output --checklist "Please Select Software you want to install:" 22 76 16)
 options=(
