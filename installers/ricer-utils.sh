@@ -20,6 +20,8 @@ options=(
 	do
 	    case $choice in
 		1)
+			sudo apt install libx11-dev
+
 			cd
 			cd tmp
 
@@ -30,6 +32,8 @@ options=(
 			sudo make clean install
 			;;
 		2)
+			sudo apt install libx11-dev
+
 			cd
 			cd tmp
 
