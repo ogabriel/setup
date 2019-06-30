@@ -16,7 +16,9 @@ sudo apt install libgl1-mesa-dri mesa-utils -y
 
 sudo apt install lightdm --no-install-recommends -y
 
-sudo apt install lightdm-greeter -y
+dm-tools --test-mode -d
+
+sudo apt install lightdm-greeter lightdm-webkit-greeter -y
 
 apt install i3 --no-install-recommends -y
 
