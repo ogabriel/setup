@@ -32,7 +32,7 @@ sudo apt install chromium-browser -y
 
 sudo apt install build-essential -y
 
-sudo apt install pulseaudio feh ranger chromium-browser
+sudo apt install pulseaudio feh imagemagick ranger chromium-browser
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
