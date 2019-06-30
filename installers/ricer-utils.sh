@@ -23,7 +23,7 @@ options=(
 	do
 	    case $choice in
 		1)
-			sudo apt install libx11-dev
+			sudo apt install libx11-dev -y &&
 
 			cd
 			cd tmp
@@ -35,7 +35,7 @@ options=(
 			sudo make clean install
 			;;
 		2)
-			sudo apt install libx11-dev
+			sudo apt install libx11-dev -y &&
 
 			cd
 			cd tmp
@@ -48,7 +48,7 @@ options=(
 		3)
 			sudo apt-get install build-essential automake \
 				pkg-config fakeroot debhelper \
-				liblightdm-gobject-1-dev libgtk-3-dev
+				liblightdm-gobject-1-dev libgtk-3-dev -y &&
 			# sudo apt-get install build-essential automake \
 			# 	pkg-config fakeroot debhelper \
 			# 	liblightdm-gobject-dev libgtk-3-dev
@@ -65,7 +65,7 @@ options=(
 		4)
 			sudo apt-get install build-essential automake \
 				pkg-config fakeroot debhelper \
-				liblightdm-gobject-1-dev libgtk-3-dev
+				liblightdm-gobject-1-dev libgtk-3-dev -y &&
 			# sudo apt-get install build-essential automake \
 			# 	pkg-config fakeroot debhelper \
 			# 	liblightdm-gobject-dev libgtk-3-dev
@@ -85,7 +85,7 @@ options=(
 					libstartup-notification0-dev libxcb-randr0-dev \
 					libev-dev libxcb-cursor-dev libxcb-xinerama0-dev \
 					libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev \
-					autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev
+					autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev -y &&
 
 			cd
 			cd tmp
@@ -106,8 +106,13 @@ options=(
 			sudo make install
 			;;
 		6)
-			sudo apt install build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
-			sudo apt install libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev i3-wm libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev
+			sudo apt install build-essential git cmake cmake-data pkg-config python3-sphinx \
+				libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev \
+				libxcb-composite0-dev python-xcbgen xcb-proto libxcb-image0-dev \
+				libxcb-ewmh-dev libxcb-icccm4-dev -y &&
+			sudo apt install libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev \
+				libpulse-dev i3-wm libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev \
+				libnl-genl-3-dev -y &&
 
 			cd
 			cd tmp
@@ -123,7 +128,9 @@ options=(
 			sudo make install
 			;;
 		7)
-			curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+			sudo apt install curl -y &&
+
+			curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin &&
 
 			# Create a symbolic link to add kitty to PATH (assuming ~/.local/bin is in
 			# your PATH)
