@@ -33,9 +33,10 @@ do
             git checkout "$(git describe --abbrev=0 --tags)"
             echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
             echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
-            asdf update
 
             source ~/.bashrc
+
+            asdf update
             ;;
         2)
             asdf plugin-add ruby
