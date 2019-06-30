@@ -2,6 +2,11 @@
 
 sudo apt update && sudo apt upgrade
 
+sudo apt install ubuntu-drivers-common &&
+sudo ubuntu-drivers autoinstall &&
+
+sudo apt install software-properties-common &&
+
 sudo apt install linux-headers-$(uname -r) &&
 
 sudo apt install neofetch -y &&
