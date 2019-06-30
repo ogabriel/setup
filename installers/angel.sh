@@ -36,4 +36,4 @@ sudo apt install chromium-browser -y &&
 
 sudo apt install build-essential -y &&
 
-sudo apt install pulseaudio feh imagemagick ranger chromium-browser -y
+sudo apt install pulseaudio rofi feh imagemagick ranger chromium-browser -y
