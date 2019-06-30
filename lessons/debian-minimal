@@ -43,3 +43,7 @@ install:
 #for the lightdm, install this package
 https://github.com/prikhi/lightdm-mini-greeter
 this is super dope, is a new screen for lightdm
+
+## problems with i3-gaps
+install xutils-dev
+install https://github.com/Airblader/xcb-util-xrm

@@ -22,4 +22,7 @@ apt install sudo
 
 adduser gabriel sudo
 
+install wicd
+install volumeicon
+
 
