@@ -12,7 +12,7 @@ sudo apt install xorg -y &&
 
 sudo apt install xserver-xorg-hwe-18.04 xserver-xorg-input-all-hwe-18.04 -y &&
 
-sudo apt install xserver-xorg-video-dummy-hwe-18.04  xserver-xorg-video-nouveau-hwe-18.04 &&
+sudo apt install xserver-xorg-video-dummy-hwe-18.04  xserver-xorg-video-nouveau-hwe-18.04 -y &&
 
 # sudo apt install xserver-xorg-video-dummy xserver-xorg-input-void xinit x11-xserver-utils -y &&
 
