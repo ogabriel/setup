@@ -34,6 +34,8 @@ do
             echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
             echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
             asdf update
+
+            source ~/.bashrc
             ;;
         2)
             asdf plugin-add ruby
@@ -42,6 +44,7 @@ do
             ;;
         3)
             asdf plugin-add nodejs
+            bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
             asdf install nodejs 12.0.0
             asdf global nodejs 12.0.0
             ;;
