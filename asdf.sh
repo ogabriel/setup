@@ -27,7 +27,9 @@ do
             sudo apt install \
               automake autoconf libreadline-dev \
               libncurses-dev libssl-dev libyaml-dev \
-              libxslt-dev libffi-dev libtool unixodbc-dev
+              libxslt-dev libffi-dev libtool unixodbc-dev \
+              unizp -y
+
             git clone https://github.com/asdf-vm/asdf.git ~/.asdf
             cd ~/.asdf
             git checkout "$(git describe --abbrev=0 --tags)"
