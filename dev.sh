@@ -1,8 +1,8 @@
 #!/bin/bash
-cd
+cd echo 'Updating and upgrading' sudo apt-get update && sudo apt-get upgrade -y
 
-echo 'Updating and upgrading'
-sudo apt-get update && sudo apt-get upgrade -y
+mkdir ~/tmp
+cd ~/tmp
 
 sudo apt-get install -y dialog
 cmd=(dialog --separate-output --checklist "Please select software you want to install: " 22 76 16)
@@ -18,6 +18,7 @@ options=(
         9 "click 0.3.2" off
         10 "gitkraken" off
         11 "dbeaver" off
+        12 "minikube (kvm)" off
         )
         choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
         clear
@@ -127,6 +128,30 @@ EOL
             sudo add-apt-repository ppa:serge-rider/dbeaver-ce
             sudo apt-get update
             sudo apt-get install -y dbeaver-ce
+            ;;
+        12)
+            # install minikube
+            curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+              && chmod +x minikube
+
+            sudo install minikube /usr/local/bin
+
+            # install kvm qemu
+            sudo apt install libvirt-clients libvirt-daemon-system qemu-kvm
+
+            curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 \
+              && sudo install docker-machine-driver-kvm2 /usr/local/bin/
+
+            sudo systemctl enable libvirtd.service
+            sudo systemctl start libvirtd.service
+            sudo systemctl status libvirtd.service
+
+            sudo usermod -a -G libvirt $(whoami)
+
+            minikube config set vm-driver kvm2
+
+            sudo chown -R $USER $HOME/.kube
+            sudo chown -R $USER $HOME/.minikube
             ;;
     esac
 done
