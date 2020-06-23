@@ -21,9 +21,8 @@ for choice in $choices
 do
     case $choice in
         1)
+            wget -O- https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
             sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free"
-            # somethimes this key can give you some problemes, so find another online
-            sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A87FF9DF48BF1C90
             sudo apt-get update
             sudo apt-get install spotify-client -y --allow-unauthenticated
             ;;
