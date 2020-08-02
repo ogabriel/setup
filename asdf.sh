@@ -28,7 +28,7 @@ do
               automake autoconf libreadline-dev \
               libncurses-dev libssl-dev libyaml-dev \
               libxslt-dev libffi-dev libtool unixodbc-dev \
-              unizp -y
+              unzip -y
 
             git clone https://github.com/asdf-vm/asdf.git ~/.asdf
             cd ~/.asdf
