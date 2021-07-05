@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir ~/tmp
+mkdir -p ~/tmp
 cd ~/tmp
 
 sudo apt-get install -y dialog
@@ -53,7 +53,7 @@ do
             sudo apt-get install -y code
             ;;
         5)
-            # install repository
+            # dependencies
             sudo apt install \
                 apt-transport-https \
                 ca-certificates \
