@@ -1,9 +1,6 @@
 #!/bin/bash
-# asdf versions
 
 cd
-
-echo 'Updating and upgrading'
 
 sudo apt-get install dialog
 cmd=(dialog --separate-output --checklist "Please select software you want to install: " 22 76 16)
