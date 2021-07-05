@@ -1,5 +1,4 @@
 #!/bin/bash
-cd echo 'Updating and upgrading' sudo apt-get update && sudo apt-get upgrade -y
 
 mkdir ~/tmp
 cd ~/tmp
