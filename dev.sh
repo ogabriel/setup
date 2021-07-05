@@ -55,23 +55,32 @@ do
             ;;
         5)
             # install repository
-            sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-            sudo apt-key fingerprint 0EBFCD88
-            sudo add-apt-repository \
-                "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-                $(lsb_release -cs) \
-                stable"
-            # really install now
-            sudo apt-get update
-            sudo apt-get install docker-ce docker-ce-cli containerd.io
+            sudo apt install \
+                apt-transport-https \
+                ca-certificates \
+                curl \
+                gnupg \
+                lsb-release
 
-            # use without sudo
+            # install GPG key
+            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+            # add repo
+            echo \
+              "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+              $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+            # install
+            sudo apt update
+            sudo apt install docker-ce docker-ce-cli containerd.io
+
+            # add group to use docker without sudo
             sudo groupadd docker
             sudo usermod -aG docker $USER
 
-            sudo systemctl enable docker
-            echo manual | sudo tee /etc/init/docker.override
+            # ubuntu should already have this, but just in case
+            # sudo systemctl enable docker.service
+            # sudo systemctl enable containerd.service
             ;;
         6)
             sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
