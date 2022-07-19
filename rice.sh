@@ -1,8 +1,8 @@
 #!/bin/bash
 cd
 
-echo 'Updating and upgrading'
-sudo apt-get update && sudo apt-get upgrade -y
+echo 'Updating'
+sudo apt-get update
 
 sudo apt-get install -y dialog
 cmd=(dialog --separate-output --checklist "Please select software you want to install: " 22 76 16)
