@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Ultimate Cura
+Exec=ultimaker_cura
+Icon=~/.local/icons/ultimaker_cura.png
+comment=3d printer slicer app
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Utility;
