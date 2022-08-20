@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Ultimate Cura
-Exec=ultimaker_cura
-Icon=~/.local/icons/ultimaker_cura.png
+Exec=/opt/cura/cura
+Icon=/opt/cura/cura.png
 comment=3d printer slicer app
 Type=Application
 Terminal=false
