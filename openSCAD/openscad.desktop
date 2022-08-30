@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=OpenSCAD
+Exec=/opt/openscad/openscad
+Icon=/opt/openscad/icon.png
+comment=3d modeling app
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Utility;
