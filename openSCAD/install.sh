@@ -1,28 +1,28 @@
 #!/bin/bash
 
-# source of the fix to icons: https://github.com/openscad/openscad/issues/3523#issuecomment-861524760
-
-cd /tmp
-
-wget -O /tmp/openscad https://files.openscad.org/OpenSCAD-2021.01-x86_64.AppImage
-chmod +x /tmp/openscad
-/tmp/openscad --appimage-extract
-
-cp /usr/lib/x86_64-linux-gnu/libcairo.so.2 /tmp/squashfs-root/usr/lib/libcairo.so.2
-
-wget -O /tmp/appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
-chmod +x /tmp/appimagetool
-
-/tmp/appimagetool /tmp/squashfs-root
-
-mv /tmp/OpenSCAD-x86_64.AppImage /tmp/openscad
-
+# create folder
 sudo mkdir -p /opt/openscad
 
-sudo mv /tmp/openscad /opt/openscad
-sudo chmod +x /opt/openscad/openscad
+# add icon
+sudo cp ./icon.png /opt/openscad/
 
+# create shortcut
 mkdir -p ~/.local/share/applications/
 cp ./openscad.desktop ~/.local/share/applications/
 
-sudo cp ./icon.png /opt/openscad/
+# download appimage and fix: https://github.com/openscad/openscad/issues/3523#issuecomment-861524760
+wget -O /tmp/openscad.AppImage https://files.openscad.org/OpenSCAD-2021.01-x86_64.AppImage
+chmod +x /tmp/openscad.AppImage
+/tmp/openscad.AppImage --appimage-extract
+
+cp /usr/lib/x86_64-linux-gnu/libcairo.so.2 /tmp/squashfs-root/usr/lib/libcairo.so.2
+
+wget -O /tmp/appimagetool.AppImage https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+chmod +x /tmp/appimagetool.AppImage
+
+/tmp/appimagetool.AppImage /tmp/squashfs-root
+
+mv /tmp/OpenSCAD-x86_64.AppImage /tmp/openscad.AppImage
+chmod +x /tmp/openscad.AppImage
+
+sudo mv /tmp/openscad.AppImage /tmp/openscad/
