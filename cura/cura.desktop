@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Ultimate Cura
-Exec=/opt/cura/cura
+Exec=/opt/cura/cura.AppImage
 Icon=/opt/cura/icon.png
 comment=3d printer slicer app
 Type=Application
