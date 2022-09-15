@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=OpenSCAD
-Exec=/opt/openscad/openscad
+Exec=/opt/openscad/openscad.AppImage
 Icon=/opt/openscad/icon.png
 comment=3d modeling app
 Type=Application
