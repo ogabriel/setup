@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Super slicer
+Exec=/opt/superslicer/superslicer.AppImage
+Icon=/opt/superslicer/icon.png
+comment=3d printer slicer app
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Utility;
