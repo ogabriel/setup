@@ -10,6 +10,8 @@ sudo cp ./icon.png /opt/openscad/
 mkdir -p ~/.local/share/applications/
 cp ./openscad.desktop ~/.local/share/applications/
 
+cd /tmp
+
 # download appimage and fix: https://github.com/openscad/openscad/issues/3523#issuecomment-861524760
 wget -O /tmp/openscad.AppImage https://files.openscad.org/OpenSCAD-2021.01-x86_64.AppImage
 chmod +x /tmp/openscad.AppImage
@@ -22,7 +24,6 @@ chmod +x /tmp/appimagetool.AppImage
 
 /tmp/appimagetool.AppImage /tmp/squashfs-root
 
-mv /tmp/OpenSCAD-x86_64.AppImage /tmp/openscad.AppImage
 chmod +x /tmp/openscad.AppImage
 
-sudo mv /tmp/openscad.AppImage /tmp/openscad/
+sudo mv /tmp/openscad.AppImage /opt/openscad/
