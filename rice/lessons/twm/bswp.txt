@@ -1,0 +1,7 @@
+binary tree_based
+
+you can fix a workspace to a monitor, and just transfer shit up to another monitor by the workspace
+
+defines the monitor per workspace in the config file
+
+the configuration file is just a script that runs and gives you things

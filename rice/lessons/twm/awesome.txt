@@ -1,0 +1,9 @@
+list based
+
+2 fullscreen mode
+magnify mode (make a big screen in float and others on the background)
+
+programmed in lua
+configured in lua
+
+
