@@ -24,6 +24,6 @@ chmod +x /tmp/appimagetool.AppImage
 
 /tmp/appimagetool.AppImage /tmp/squashfs-root
 
-chmod +x /tmp/openscad.AppImage
+chmod +x /tmp/OpenSCAD-x86_64.AppImage
 
-sudo mv /tmp/openscad.AppImage /opt/openscad/
+sudo mv /tmp/OpenSCAD-x86_64.AppImage /opt/openscad/openscad.AppImage
