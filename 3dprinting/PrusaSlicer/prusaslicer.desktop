@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Prusa slicer
+Exec=/opt/prusaslicer/prusaslicer.AppImage
+Icon=/opt/prusaslicer/icon.png
+comment=3d printer slicer app
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Utility;
