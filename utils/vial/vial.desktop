@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Vial
+Exec=/opt/vial/vial.AppImage
+comment=VIAL keyboard configurator
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Utility;
