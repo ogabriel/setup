@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if which apt; then
-    sudo apt-get install unzip -y
+    sudo apt-get install unzip inotify-tools -y
 elif which pacman; then
-    sudo pacman -S unzip --noconfirm
+    sudo pacman -S unzip inotify-tools --noconfirm
 fi
 
 asdf update
