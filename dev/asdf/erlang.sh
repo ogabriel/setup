@@ -39,3 +39,5 @@ asdf plugin add erlang
 asdf plugin update erlang
 
 asdf install erlang latest
+
+asdf global erlang latest
