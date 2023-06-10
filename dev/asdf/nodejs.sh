@@ -6,6 +6,8 @@ elif which pacman; then
     sudo pacman -S python gcc make python-pip --noconfirm
 fi
 
+asdf update
+
 asdf plugin add nodejs
 
 asdf plugin update nodejs
