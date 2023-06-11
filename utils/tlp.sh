@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if which apt; then
-    sudo apt remove power-profiles-daemon
+    sudo apt remove power-profiles-daemon -y
     sudo apt install tlp tlp-rdw -y
 elif which pacman; then
     sudo pacman -S tlp tlp-rdw --noconfirm
