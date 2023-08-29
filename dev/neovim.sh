@@ -1,4 +1,10 @@
 #!/bin/sh
+# #
+if which apt; then
+   sudo apt-get install ninja-build gettext cmake unzip curl
+else if which pacman; then
+    sudo pacman -S base-devel cmake unzip ninja curl
+fi
 
 set -e
 
