@@ -19,4 +19,8 @@ git checkout stable
 
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 
-cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
+if which apt; then
+    cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
+elif which pacman; then
+    sudo make install
+fi
