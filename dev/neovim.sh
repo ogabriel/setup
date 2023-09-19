@@ -21,6 +21,6 @@ make CMAKE_BUILD_TYPE=RelWithDebInfo
 
 if which apt; then
     cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
-elif which pacman; then
+else
     sudo make install
 fi
