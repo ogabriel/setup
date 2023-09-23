@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-./dev/asdf/golang.sh
-go install mvdan.cc/sh/v3/cmd/shfmt@latest
+asdf plugin add shfmt
+asdf plugin update shfmt
+asdf install shfmt latest
+asdf global shfmt latest
