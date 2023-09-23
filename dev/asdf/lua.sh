@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f "/etc/arch-release" ]; then
-    sudo pacman -S base-devel linux-headers --neededl
+    sudo pacman -S base-devel linux-headers --noconfirm --needed
 elif [ -f "/etc/lsb-release" ]; then
     sudo apt-get install linux-headers-$(uname -r) build-essential
 fi
