@@ -10,3 +10,7 @@
 things:
 - https://github.com/NixOS/nixpkgs/issues/158175
 - https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/ozone_overview.md
+
+## firefox 
+
+wayland support is native
