@@ -9,4 +9,4 @@ fi
 asdf plugin add lua
 asdf plugin update lua
 asdf install lua latest
-asdf global golang latest
+asdf global lua latest
