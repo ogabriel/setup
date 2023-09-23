@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f "/etc/arch-release" ]; then
-    sudo pacman -S curl unzip bash
+    sudo pacman -S curl unzip bash --noconfirm --needed
 elif [ -f "/etc/lsb-release" ]; then
     sudo apt-get install curl unzip bash
 fi

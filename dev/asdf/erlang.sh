@@ -19,7 +19,7 @@ if which apt; then
         libncurses-dev \
         openjdk-11-jdk -y
 elif which pacman; then
-    sudo pacman -S --needed base-devel --noconfirm
+    sudo pacman -S base-devel --noconfirm --needed
     sudo pacman -S \
         ncurses \
         glu \

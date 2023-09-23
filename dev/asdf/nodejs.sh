@@ -3,7 +3,7 @@
 if which apt; then
     sudo apt-get install python3 g++ make python3-pip -y
 elif which pacman; then
-    sudo pacman -S python gcc make python-pip --noconfirm
+    sudo pacman -S python gcc make python-pip --noconfirm --needed
 fi
 
 asdf update
