@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f "/etc/arch-release" ]; then
-    sudo pacman -S coreutils curl
+    sudo pacman -S coreutils curl --noconfirm --needed
 elif [ -f "/etc/lsb-release" ]; then
     sudo apt install coreutils curl
 fi

@@ -5,7 +5,7 @@ if which apt; then
 elif which pacman; then
     # maybe is needed
     # yay -S gcc6 --noconfirm
-    sudo pacman -S --needed base-devel rust libffi libyaml openssl zlib --noconfirm
+    sudo pacman -S base-devel rust libffi libyaml openssl zlib --noconfirm --needed
 fi
 
 asdf plugin add ruby

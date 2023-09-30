@@ -3,7 +3,8 @@
 if which apt; then
     sudo apt-get install unzip inotify-tools -y
 elif which pacman; then
-    sudo pacman -S unzip inotify-tools --noconfirm
+    sudo pacman -S unzip inotify-tools --noconfirm --needed
+
 fi
 
 asdf update
