@@ -8,8 +8,5 @@ elif which pacman; then
     sudo pacman -S base-devel rust libffi libyaml openssl zlib --noconfirm --needed
 fi
 
-asdf update
-
 asdf plugin add ruby
-
 asdf plugin update ruby
