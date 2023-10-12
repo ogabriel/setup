@@ -27,5 +27,8 @@ fi
 
 asdf plugin add python
 asdf plugin update python
-asdf install python 3.11.5
-asdf global python 3.11.5
+
+VERSION=${1:-$(asdf list all python | grep -v "[a-z]" | tail -n 1)}
+
+asdf install python $VERSION
+asdf global python $VERSION
