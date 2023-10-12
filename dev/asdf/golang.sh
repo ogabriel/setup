@@ -8,5 +8,8 @@ fi
 
 asdf plugin add golang
 asdf plugin update golang
-asdf install golang latest
-asdf global golang latest
+
+VERSION=${1:-$(asdf latest golang)}
+
+asdf install golang $VERSION
+asdf global golang $VERSION

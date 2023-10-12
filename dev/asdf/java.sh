@@ -13,9 +13,10 @@ elif [ -f "/etc/lsb-release" ]; then
     sudo apt-get install bash curl sha256sum unzip jq
 fi
 
-VERSION=${1:-$(asdf list all java | grep openjdk-17 | tail -n 1)}
-
 asdf plugin add java
 asdf plugin update java
+
+VERSION=${1:-$(asdf list all java | grep openjdk-17 | tail -n 1)}
+
 asdf install java $VERSION
 asdf global java $VERSION

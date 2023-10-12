@@ -34,10 +34,10 @@ elif which pacman; then
         --needed
 fi
 
-VERSION=${1:-$(asdf latest erlang)}
-
-asdf update
 asdf plugin add erlang
 asdf plugin update erlang
+
+VERSION=${1:-$(asdf latest erlang)}
+
 KERL_BUILD_DOCS=yes KERL_CONFIGURE_OPTIONS="--without-javac" asdf install erlang $VERSION
 asdf global erlang $VERSION
