@@ -33,7 +33,7 @@ fi
 asdf plugin add ruby
 asdf plugin update ruby
 
-VERSION=${1:-$(asdf list all ruby | grep -v -e truffleruby -e ree -e rbx -e mruby -e jruby -e artichoke -e maglev -e picoruby -e preview -e rc -e dev | tail -n 1)}
+VERSION=${1:-$(asdf list all ruby | grep -v "[a-z]" | tail -n 1)}
 
 asdf install ruby $VERSION
 asdf global ruby $VERSION
