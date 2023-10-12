@@ -15,6 +15,6 @@ elif which pacman; then
     yay -S --noconfirm tlpui
 fi
 
-sudo cp utils/tlp/* /etc/tlp.d/
+sudo cp tlp/*.conf /etc/tlp.d/
 
 sudo tlp start
