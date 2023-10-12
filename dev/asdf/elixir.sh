@@ -16,7 +16,7 @@ asdf plugin update elixir
 # OTP version when installing elixir, as it allows to use the most advanced features of OTP, examples:
 # 1.14.4 = 1.14.4-otp-23 (oldest)
 # 1.14.5 = 1.14.5-otp-24 (older, but not the oldest)
-VERSION=${1:-$(asdf list all elixir | grep -v master | grep -v main | tail -n 1)}
+VERSION=${1:-$(asdf list all elixir | grep -v -e master -e main | tail -n 1)}
 
 asdf install elixir $VERSION
 asdf global elixir $VERSION
