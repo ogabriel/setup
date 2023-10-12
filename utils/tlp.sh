@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 
 if which apt; then
-    sudo apt remove power-profiles-daemon -y
-    sudo apt install tlp tlp-rdw -y
+    sudo apt remove -y power-profiles-daemon
+    sudo apt install -y tlp tlp-rdw
 elif which pacman; then
-    sudo pacman -S tlp tlp-rdw --noconfirm
-    systemctl enable tlp.service
-    systemctl mask systemd-rfkill.service systemd-rfkill.socket
-    systemctl enable NetworkManager-dispatcher.service
+    sudo pacman -R --noconfirm power-profiles-daemon
+
+    # https://wiki.archlinux.org/title/TLP
+    sudo pacman -S --noconfirm tlp tlp-rdw
+    sudo systemctl enable tlp.service
+    sudo systemctl enable NetworkManager-dispatcher.service
+    sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+
+    yay -S --noconfirm tlpui
 fi
 
 sudo cp utils/tlp/* /etc/tlp.d/
