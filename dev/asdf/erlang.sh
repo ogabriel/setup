@@ -19,8 +19,8 @@ if which apt; then
         libncurses-dev \
         openjdk-11-jdk -y
 elif which pacman; then
-    sudo pacman -S base-devel --noconfirm --needed
     sudo pacman -S \
+        base-devel \
         ncurses \
         glu \
         mesa \
@@ -29,15 +29,13 @@ elif which pacman; then
         libssh \
         unixodbc \
         libxslt \
-        fop --noconfirm
+        fop \
+        --noconfirm \
+        --needed
 fi
 
 asdf update
-
 asdf plugin add erlang
-
 asdf plugin update erlang
-
-asdf install erlang latest
-
+KERL_BUILD_DOCS=yes asdf install erlang latest
 asdf global erlang latest
