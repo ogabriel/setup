@@ -34,7 +34,7 @@ elif which pacman; then
         --needed
 fi
 
-VERSION=$1 || latest
+VERSION=${1:-$(asdf latest erlang)}
 
 asdf update
 asdf plugin add erlang
