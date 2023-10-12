@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if which apt; then
-    apt-get -y install \
+    sudo apt install -y \
         build-essential \
         autoconf \
         m4 \
@@ -16,10 +16,9 @@ if which apt; then
         xsltproc \
         fop \
         libxml2-utils \
-        libncurses-dev \
-        openjdk-11-jdk -y
+        libncurses-dev
 elif which pacman; then
-    sudo pacman -S \
+    sudo pacman -S --noconfirm --needed \
         base-devel \
         ncurses \
         glu \
@@ -29,9 +28,7 @@ elif which pacman; then
         libssh \
         unixodbc \
         libxslt \
-        fop \
-        --noconfirm \
-        --needed
+        fop
 fi
 
 asdf plugin add erlang

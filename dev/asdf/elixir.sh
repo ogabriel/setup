@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if which apt; then
-    sudo apt-get install unzip inotify-tools -y
+    sudo apt install -y unzip inotify-tools
 elif which pacman; then
-    sudo pacman -S unzip inotify-tools --noconfirm --needed
+    sudo pacman -S --noconfirm --needed unzip inotify-tools
 fi
 
 asdf plugin add elixir

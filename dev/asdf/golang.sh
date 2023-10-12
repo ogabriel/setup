@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [ -f "/etc/arch-release" ]; then
-    sudo pacman -S coreutils curl --noconfirm --needed
+    sudo pacman -S --noconfirm --needed coreutils curl
 elif [ -f "/etc/lsb-release" ]; then
-    sudo apt install coreutils curl
+    sudo apt install -y coreutils curl
 fi
 
 asdf plugin add golang

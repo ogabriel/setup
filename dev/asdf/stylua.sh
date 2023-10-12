@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [ -f "/etc/arch-release" ]; then
-    sudo pacman -S curl unzip bash --noconfirm --needed
+    sudo pacman -S --noconfirm --needed curl unzip bash
 elif [ -f "/etc/lsb-release" ]; then
-    sudo apt-get install curl unzip bash
+    sudo apt install -y curl unzip bash
 fi
 
 asdf plugin add stylua
