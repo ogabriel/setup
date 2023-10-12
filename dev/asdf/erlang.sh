@@ -37,5 +37,5 @@ fi
 asdf update
 asdf plugin add erlang
 asdf plugin update erlang
-KERL_BUILD_DOCS=yes asdf install erlang latest
+KERL_BUILD_DOCS=yes KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac" asdf install erlang latest
 asdf global erlang latest
