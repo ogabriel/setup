@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-if which apt; then
-    sudo apt install curl git -y
-elif which pacman; then
-    sudo pacman -S curl git --noconfirm
+if [ -f "/etc/arch-release" ]; then
+    sudo pacman -S --noconfirm --needed curl git
+elif [ -f "/etc/lsb-release" ]; then
+    sudo apt install -y curl git
 fi
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
