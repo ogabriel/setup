@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 if which apt; then
+    sudo add-apt-repository ppa:linrunner/tlp -y
+    sudo apt update
     sudo apt remove -y power-profiles-daemon
     sudo apt install -y tlp tlp-rdw
 elif which pacman; then
@@ -14,7 +16,5 @@ elif which pacman; then
 
     yay -S --noconfirm tlpui
 fi
-
-sudo cp tlp/*.conf /etc/tlp.d/
 
 sudo tlp start
