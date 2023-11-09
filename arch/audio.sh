@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-sudo pacman -S --needed --no-confirm \
+sudo pacman -S --needed --noconfirm \
     pipewire \
     pipewire-alsa \
     pipewire-pulse \
