@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 
+./arch/yay.sh
 ./arch/audio.sh
 ./arch/bluetooth.sh
+./arch/interface.sh
+./arch/network.sh
 
 sudo pacman -R xdg-desktop-portal-gtk xdg-desktop-portal-wlr
 
@@ -13,3 +16,5 @@ sudo pacman -S --needed \
     dunst \
     grim \
     slurp
+
+yay -S python-pywal wpgtk
