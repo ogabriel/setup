@@ -3,7 +3,7 @@
 ./arch/audio.sh
 ./arch/bluetooth.sh
 
-sudo pacman -S -needed \
+sudo pacman -S --needed \
     qt5-wayland \
     qt6-wayland \
     xdg-desktop-portal \
