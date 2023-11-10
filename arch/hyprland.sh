@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-./setup/arch/audio.sh
-./setup/arch/bluetooth.sh
+./arch/audio.sh
+./arch/bluetooth.sh
 
 sudo pacman -S -needed \
     qt5-wayland \
