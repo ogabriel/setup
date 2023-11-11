@@ -4,7 +4,8 @@ sudo pacman -S --needed \
     bluez \
     bluez-utils \
     bluez-libs \
-    blueman
+    blueman \
+    libappindicator-gtk3
 
 modprobe btusb
 

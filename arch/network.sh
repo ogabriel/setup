@@ -2,4 +2,5 @@
 
 sudo pacman -S --needed \
     networkmanager \
-    network-manager-applet
+    network-manager-applet \
+    libappindicator-gtk3
