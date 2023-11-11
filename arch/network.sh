@@ -6,3 +6,4 @@ sudo pacman -S --needed \
     libappindicator-gtk3
 
 sudo systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
