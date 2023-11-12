@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+echo "Installing bluetooth packages"
 sudo pacman -S --needed \
     bluez \
     bluez-utils \
@@ -9,5 +10,6 @@ sudo pacman -S --needed \
 
 modprobe btusb
 
+echo "Enabling bluetooth service"
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
