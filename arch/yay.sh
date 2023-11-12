@@ -1,8 +1,12 @@
 #!/usr/bin/env sh
 
-sudo pacman -S --needed --no-confirm git base-devel
+if [ -z "$(command -v yay)" ]; then
+    echo "Installing yay..."
 
-cd /tmp
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+    sudo pacman -S --needed --no-confirm git base-devel
+
+    cd /tmp
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+fi
