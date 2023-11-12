@@ -10,4 +10,5 @@ sudo pacman -S --needed \
     libpipewire \
     wireplumber \
     libwireplumber \
-    pavucontrol
+    pavucontrol \
+    playerctl
