@@ -9,4 +9,5 @@ sudo pacman -S --needed \
     pipewire-jack \
     libpipewire \
     wireplumber \
-    libwireplumber
+    libwireplumber \
+    pavucontrol
