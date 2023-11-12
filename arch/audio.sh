@@ -7,6 +7,7 @@ sudo pacman -S --needed \
     libpulse \
     pipewire-audio \
     pipewire-jack \
+    gst-plugin-pipewire \
     libpipewire \
     wireplumber \
     libwireplumber \
