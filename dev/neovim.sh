@@ -2,25 +2,23 @@
 
 set -e
 
-if which apt; then
+echo "Installing Neovim"
+
+if [ -f /etc/arch-release ]; then
+    sudo pacman -S neovim --noconfirm
+elif [ -f /etc/lsb-release ]; then
     sudo apt-get install ninja-build gettext cmake unzip curl
-elif which pacman; then
-    sudo pacman -S base-devel cmake unzip ninja curl
-fi
 
-cd /tmp
-rm -rf /tmp/neovim
+    cd /tmp
+    rm -rf /tmp/neovim
 
-git clone https://github.com/neovim/neovim
+    git clone https://github.com/neovim/neovim
 
-cd neovim
+    cd neovim
 
-git checkout stable
+    git checkout stable
 
-make CMAKE_BUILD_TYPE=RelWithDebInfo
+    make CMAKE_BUILD_TYPE=RelWithDebInfo
 
-if which apt; then
     cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
-else
-    sudo make install
 fi
