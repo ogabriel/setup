@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+echo "Installing audio packages"
 sudo pacman -S --needed \
     pipewire \
     pipewire-alsa \
