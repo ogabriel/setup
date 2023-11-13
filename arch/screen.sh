@@ -3,4 +3,8 @@
 echo "Installing screen packages"
 sudo pacman -S --needed \
     gammastep \
-    brightnessctl
+    brightnessctl \
+    grim \
+    slurp
+
+yay -S flameshot-git
