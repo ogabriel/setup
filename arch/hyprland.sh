@@ -1,10 +1,13 @@
 #!/usr/bin/env sh
 
 ./arch/yay.sh
+./arch/sddm.sh
 ./arch/audio.sh
 ./arch/bluetooth.sh
-./arch/screenl.sh
+./arch/screen.sh
 ./arch/network.sh
+./arch/gnome.sh
+./arch/fonts.sh
 
 echo "Installing hypland base packages"
 sudo pacman -R xdg-desktop-portal-gtk xdg-desktop-portal-wlr
