@@ -8,6 +8,7 @@
 ./arch/network.sh
 ./arch/gnome.sh
 ./arch/fonts.sh
+./arch/thunar.sh
 
 echo "Installing hypland base packages"
 sudo pacman -R xdg-desktop-portal-gtk xdg-desktop-portal-wlr
