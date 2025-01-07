@@ -13,7 +13,6 @@ if [ -f "/etc/arch-release" ]; then
         libedit \
         icu \
         libjpeg-turbo \
-        mariadb-libs \
         oniguruma \
         libpng \
         readline \
